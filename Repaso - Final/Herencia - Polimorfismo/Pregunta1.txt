@@ -1,0 +1,8 @@
+Convierta la clase Polygon a clase abstracta haciendo que el metodo area sea virtual pura.
+Implemente clases que hereden de la clase Polygon: Rectangle, Triangle;
+cada una con sus variables y funciones miembro particulares.
+En la funcion principal, crear un arreglo de punteros de tipo Polygon,
+cada elemento del vector debe contener Rectangles y Triangles. Cambie y/o adicione
+codigo a la clase Polygon de ser necesario.
+Implemente una funcion que recorra el arreglo de punteros e imprima el
+́area de cada elemento(Rectangles y Triangles).
