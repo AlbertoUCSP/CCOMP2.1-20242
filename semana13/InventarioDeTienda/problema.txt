@@ -1,0 +1,65 @@
+Problema: Sistema de Inventario de Tienda
+Crea un programa en C++ para gestionar el inventario de una tienda. El inventario incluye dos tipos de productos: 
+Electrónicos y Ropa. Los productos deben almacenarse en una lista dinámica y gestionarse con punteros y polimorfismo.
+
+Requisitos:
+1. Clases y Herencia
+Clase Base: Producto
+Atributos:
+id (entero, único para cada producto).
+nombre (cadena).
+precio (flotante).
+Métodos:
+Constructor que inicialice los atributos.
+Métodos virtual:
+mostrarInfo() para mostrar la información del producto.
+clonar() para devolver una copia dinámica del producto.
+Clases Derivadas:
+Electronico:
+Atributo adicional: garantia (en meses, entero).
+Sobrescribe mostrarInfo() para incluir la garantía.
+Ropa:
+Atributo adicional: talla (cadena).
+Sobrescribe mostrarInfo() para incluir la talla.
+2. Array Dinámico y Encapsulamiento
+Usa un array dinámico de punteros para almacenar los objetos de la clase base Producto.
+Implementa una clase Inventario con los métodos:
+agregarProducto(Producto*): Añade un producto al inventario.
+eliminarProductoPorId(int id): Elimina un producto del inventario.
+mostrarProductos(): Muestra todos los productos en el inventario.
+Usa encapsulamiento para proteger el acceso al array dinámico.
+3. Sobrecarga de Operadores
+Sobrecarga el operador << para mostrar la información de un producto.
+Sobrecarga el operador [] para acceder a un producto por su posición en el inventario.
+4. Uso de Vectores
+Almacena los id de los productos eliminados en un std::vector para llevar un registro de productos removidos.
+5. Punteros
+Usa punteros para:
+Almacenar y manejar los productos en el array dinámico.
+Implementar la clonación de objetos.
+
+Ejemplo de salida:
+1. Agregar producto:
+   - Tipo: Electrónico
+   - Nombre: Laptop
+   - Precio: 1200.50
+   - Garantía: 24 meses
+
+2. Agregar producto:
+   - Tipo: Ropa
+   - Nombre: Camiseta
+   - Precio: 25.99
+   - Talla: M
+
+3. Mostrar productos:
+   Producto [ID: 1, Electrónico] - Laptop, $1200.50, Garantía: 24 meses.
+   Producto [ID: 2, Ropa] - Camiseta, $25.99, Talla: M.
+
+4. Eliminar producto:
+   - ID: 1
+
+5. Mostrar productos:
+   Producto [ID: 2, Ropa] - Camiseta, $25.99, Talla: M.
+
+6. Mostrar productos eliminados:
+   - ID: 1
